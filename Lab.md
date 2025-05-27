@@ -1,4 +1,4 @@
-1.import rsa
+14.import rsa
 import hashlib
 
 # 1. Generate RSA keys
@@ -20,6 +20,7 @@ try:
 except rsa.VerificationError:
     print("Verification Failed: Message may be tampered.")
 
+output:Signature Verified: Message is authentic.
 
 
 13. from cryptography.fernet import Fernet
@@ -41,3 +42,7 @@ decrypted = cipher.decrypt(encrypted)
 print("Key:", key)
 print("Encrypted:", encrypted)
 print("Decrypted:", decrypted)
+
+output:Key: b'vJ1uC8rMEvM5Xo...'
+Encrypted: b'gAAAAABlY...'
+Decrypted: b'Hello Tani Sparkle!'
