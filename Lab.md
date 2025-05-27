@@ -19,3 +19,25 @@ try:
     print("Signature Verified: Message is authentic.")
 except rsa.VerificationError:
     print("Verification Failed: Message may be tampered.")
+
+
+
+13. from cryptography.fernet import Fernet
+
+# 1. Generate a key
+key = Fernet.generate_key()
+cipher = Fernet(key)
+
+# 2. Message to encrypt
+message = b"Hello Tani Sparkle!"
+
+# 3. Encrypt the message
+encrypted = cipher.encrypt(message)
+
+# 4. Decrypt the message
+decrypted = cipher.decrypt(encrypted)
+
+# 5. Print results
+print("Key:", key)
+print("Encrypted:", encrypted)
+print("Decrypted:", decrypted)
